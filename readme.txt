@@ -6,15 +6,36 @@
 
 size_em plugin for Pukiwiki
 
+size.inc.php use "px". 
+ex. "font-size:2px".
+But this size_em.inc.php use "em". 
+ex. "font-size:2em"
+
 ** FEATURES/PROBLEMS:
 
-- &size_em(2){test test}; to 
+*** using with inline
+
+&size_em(2){test test}; 
+
+ to 
+
 <span style="font-size:2em;display:inline-block;line-height:100%;text-indent:0px">test test</span>
 
 ** TODO
 
-- #size_em(2) {{
+*** using with block
+#size_em(2){{
+test
+test
 }}
+
+ to 
+
+<div style="font-size:2em">
+test
+test
+</div>
+
 
 ** license
 
