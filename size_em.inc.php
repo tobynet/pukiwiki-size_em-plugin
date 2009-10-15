@@ -1,5 +1,6 @@
 <?php
 // http://github.com/toooooooby/pukiwiki-size_em-plugin/
+// ver 0.0.6
 
 define('PLUGIN_SIZE_EM_MAX', 5); // em
 define('PLUGIN_SIZE_EM_MIN',  0.1); // em
@@ -39,7 +40,7 @@ function plugin_size_em_convert()
   $func_get_args = func_get_args();
   list($result, $size, $body) = _plugin_size_em_get_args($func_get_args);
   if ($result) {
-    return '<div style="font-size:' . $size . 'em">' . $body . '</div>';
+    return '<div style="font-size:' . $size . 'em">' . convert_html($body) . '</div>';
   } else {
     return PLUGIN_SIZE_EM_CONVERT_USAGE;
   }
