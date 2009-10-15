@@ -39,7 +39,7 @@ function plugin_size_em_convert()
   $func_get_args = func_get_args();
   list($result, $size, $body) = _plugin_size_em_get_args($func_get_args);
   if ($result) {
-    return '<div style="font-size:' . $size . '">' . $body . '</div>';
+    return '<div style="font-size:' . $size . 'em">' . $body . '</div>';
   } else {
     return PLUGIN_SIZE_EM_CONVERT_USAGE;
   }
