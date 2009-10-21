@@ -1,6 +1,6 @@
 <?php
 // http://github.com/toooooooby/pukiwiki-size_em-plugin/
-// ver 0.0.6
+// ver 0.1.0
 
 define('PLUGIN_SIZE_EM_MAX', 5); // em
 define('PLUGIN_SIZE_EM_MIN',  0.1); // em
@@ -15,7 +15,7 @@ function _plugin_size_em_get_args($func_get_args)
   if ($func_num_args != 2) return array(FALSE, "", "");
   
   list($size, $body) = $func_get_args;
-  if ($size == '' || $body == '' || ! preg_match('/^\d+$/', $size))
+  if ($size == '' || $body == '' || ! preg_match('/^\d+(?:|\.\d+)$/', $size))
       return array(FALSE, "", "");
   $size = max(PLUGIN_SIZE_EM_MIN, min(PLUGIN_SIZE_EM_MAX, $size));
   return array(TRUE, $size, $body);

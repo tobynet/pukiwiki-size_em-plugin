@@ -15,33 +15,31 @@ ex. "font-size:2em"
 
 *** using with inline
 
-&size_em(2){test test}; 
+&size_em(2.5){test test}; 
 
  to 
 
-<span style="font-size:2em;display:inline-block;line-height:100%;text-indent:0px">test test</span>
-
-** TODO
+<span style="font-size:2.5em;display:inline-block;line-height:100%;text-indent:0px">test test</span>
 
 *** using with block
-#size_em(2){{
+#size_em(2.5){{
 test
 test
 }}
 
  to 
 
-<div style="font-size:2em">
+<div style="font-size:2.5em">
 test
 test
 </div>
 
+** TODO
+-nothing
 
 ** license
 
 GPL v2
 
 and Copyright (c) 2009 TOBY
-
-
 
